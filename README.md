@@ -2,6 +2,13 @@
 
 A modern, user-friendly interface for interacting with local language models through Ollama. Built with Electron, React, and TypeScript.
 
+This application runs through the command line using the prompt:
+```bash
+ollama run <model_name>
+```
+
+The interface provides a graphical front-end to manage and interact with your local Ollama models, while leveraging the power and flexibility of command-line operations under the hood.
+
 ## Features
 
 - 🚀 Easy model selection and management
