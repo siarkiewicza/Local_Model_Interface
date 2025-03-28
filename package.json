@@ -1,0 +1,82 @@
+{
+  "name": "local_model_interface",
+  "version": "1.0.0",
+  "description": "A modern interface for interacting with local language models through Ollama",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build:main": "tsc -p tsconfig.json",
+    "build:renderer": "tsc -p tsconfig.renderer.json && vite build",
+    "build": "rimraf dist && npm run build:main && npm run build:renderer",
+    "preview": "vite preview",
+    "electron:dev": "vite --mode development",
+    "electron:build": "npm run build",
+    "electron:start": "npm run electron:build && electron .",
+    "electron:package": "electron-builder build --mac --win --linux"
+  },
+  "keywords": [
+    "electron",
+    "ai",
+    "ollama",
+    "local-models",
+    "language-models",
+    "chat-interface",
+    "typescript",
+    "react"
+  ],
+  "author": {
+    "name": "Anthony Siarkiewicz",
+    "url": "https://github.com/anthonyz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthonyz/Local_Model_Interface"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.17",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^29.1.0",
+    "electron-builder": "^24.12.0",
+    "postcss": "^8.4.35",
+    "rimraf": "^5.0.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "build": {
+    "appId": "com.localmodel.interface",
+    "productName": "Local Model Interface",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
