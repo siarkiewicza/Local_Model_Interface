@@ -10,11 +10,12 @@ A modern, user-friendly interface for interacting with local language models thr
 - 🎨 Modern, responsive design
 - 🔄 Live response time indicators
 - 🛑 Simple model start/stop controls
+- 🤖 Automatic Ollama process management
 
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (v16 or higher)
-- [Ollama](https://ollama.ai/) installed and running
+- [Ollama](https://ollama.ai/) installed on your system
 - Models installed in the default Ollama location (`~/.ollama/models/`)
 
 ## Installation
@@ -49,7 +50,8 @@ npm run build
 
 ## Important Notes
 
-- The application requires Ollama to be installed and running
+- The application automatically manages the Ollama process
+- No need to manually start/stop Ollama - the interface handles this for you
 - Models must be installed in the default Ollama location
 - Keep the development server running while using the application
 
