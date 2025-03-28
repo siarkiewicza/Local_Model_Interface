@@ -38,7 +38,7 @@ cd Local_Model_Interface
 npm install
 ```
 
-3. Start the application:
+3. To start the application, open Terminal and enter this command:
 ```bash
 npm run electron:start
 ```
